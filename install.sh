@@ -43,6 +43,7 @@ fi
 # 这是一个更复杂的步骤，可以先手动安装，以后再加入脚本
 # 例如，下载并安装 Meslo Nerd Font
 info "Please install a Nerd Font manually for Powerlevel10k icons."
+info "For example, DejaVuSansM Nerd Font Mono"
 info "Visit: https://www.nerdfonts.com/font-downloads"
 
 # --- 6. (可选) 安装其他你需要的软件 ---
