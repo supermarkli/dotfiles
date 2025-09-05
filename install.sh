@@ -107,6 +107,8 @@ if [ ! -d "$CONDA_DIR" ]; then
     rm -f "$TMP_INSTALLER"
     # 初始化 zsh 以启用 conda 命令
     "$CONDA_DIR/bin/conda" init zsh || true
+    info "禁用 conda 自动激活 base 环境..."
+    conda config --set auto_activate_base false || true
 else
     info "Miniconda 已安装：$CONDA_DIR"
 fi
@@ -117,4 +119,6 @@ info "1. 将 Zsh 设为默认 shell：chsh -s \$(which zsh)"
 info "2. Terminal font：DejaVuSansM Nerd Font Mono"
 info "3. 重启终端或运行 'exec zsh' 使更改生效。"
 info "VS Code/Cursor: 在设置中搜索 terminal default profile，将 Linux 默认配置设为 zsh；或在 settings.json 设置 terminal.integrated.defaultProfile.linux=zsh"
+info "4. 如果仍有 IDE 自动注入 'conda activate base'，在设置中搜索 activateEnvironment，将 python.terminal.activateEnvironment 设为 false"
+
 
