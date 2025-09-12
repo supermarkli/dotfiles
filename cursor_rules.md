@@ -1,5 +1,3 @@
-## 用户规则
-
 - 总是用中文回应。
 - 每次回答一定要符合我设定的规则。
 - 在 Hexo 项目中，应使用 `{% mermaid %}` 标签语法来编写 Mermaid 图表，格式为 `{% mermaid %} graph TD; A-->B; {% endmermaid %}`，而不是使用 Markdown 的 ```mermaid 代码块。
