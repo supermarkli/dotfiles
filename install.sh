@@ -118,11 +118,11 @@ info "后续步骤："
 info "1. 将 Zsh 设为默认 shell：chsh -s \$(which zsh)"
 info "2. Terminal font：DejaVuSansM Nerd Font Mono"
 info "3. 重启终端或运行 'exec zsh' 使更改生效。"
-info "VS Code/Cursor: 在设置中搜索 terminal default profile，将 Linux 默认配置设为 zsh；或在 settings.json 设置 terminal.integrated.defaultProfile.linux=zsh"
-info "4. 如果仍有 IDE 自动注入 'conda activate base'，在设置中搜索 activateEnvironment，将 python.terminal.activateEnvironment 设为 false"
-info "5. 如果希望和vscode的使用习惯保持一致可以通过修改设置中workbench.activityBar.orientation，改为vertical"
-info "6. 如果希望终端选中即复制，搜索copy on selection；右键粘贴，搜索right click behavior，改为paste"
-info "7. 一些好用的插件：one dark pro；vscode-icons；"
+info "4. terminal default profile，将 Linux 默认配置设为 zsh；或在 settings.json 设置 terminal.integrated.defaultProfile.linux=zsh"
+info "5. 如果仍有 IDE 自动注入 'conda activate base'，在设置中搜索 activateEnvironment，将 python.terminal.activateEnvironment 设为 false"
+info "6. workbench.activityBar.orientation，改为vertical"
+info "7. 如果希望终端选中即复制，搜索copy on selection；右键粘贴，搜索right click behavior，改为paste"
+info "8. 一些好用的插件：one dark pro；vscode-icons；"
 
 
 
