@@ -97,20 +97,21 @@ if [ -f "$HOME/.zshrc" ] && ! grep -q "POWERLEVEL9K_INSTANT_PROMPT" "$HOME/.zshr
     sed -i '1i typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet' "$HOME/.zshrc"
 fi
 
-# --- 8. 安装 Miniconda 到 $HOME/tools/miniconda3 ---
-CONDA_DIR="$HOME/tools/miniconda3"
+# --- 8. 安装 Miniforge 到 $HOME/tools/miniforge3 ---
+CONDA_DIR="$HOME/tools/miniforge3"
 if [ ! -d "$CONDA_DIR" ]; then
-    info "安装 Miniconda 到 $CONDA_DIR..."
-    TMP_INSTALLER="$(mktemp -t miniconda-XXXXXXXX.sh)"
-    curl -fsSL -o "$TMP_INSTALLER" https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
+    info "安装 Miniforge 到 $CONDA_DIR..."
+    TMP_INSTALLER="$(mktemp -t miniforge-XXXXXXXX.sh)"
+    curl -fsSL -o "$TMP_INSTALLER" https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-Linux-x86_64.sh
     bash "$TMP_INSTALLER" -b -p "$CONDA_DIR"
     rm -f "$TMP_INSTALLER"
     # 初始化 zsh 以启用 conda 命令
     "$CONDA_DIR/bin/conda" init zsh || true
     info "禁用 conda 自动激活 base 环境..."
-    conda config --set auto_activate_base false || true
+    # 确保 conda 命令在 PATH 中，或者使用完整路径
+    "$CONDA_DIR/bin/conda" config --set auto_activate_base false || true
 else
-    info "Miniconda 已安装：$CONDA_DIR"
+    info "Miniforge 已安装：$CONDA_DIR"
 fi
 
 success "Installation script finished!"
