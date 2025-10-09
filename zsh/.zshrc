@@ -14,7 +14,9 @@ export TERMINFO=/usr/lib/terminfo
 # 修复 Conda 与 OpenSSL 3.0 的兼容性问题
 export CRYPTOGRAPHY_OPENSSL_NO_LEGACY=1
 # Conda 安装根路径（可通过预先导出 CONDA_HOME 覆盖默认值）
-export CONDA_HOME="${CONDA_HOME:-$HOME/tools/miniconda3}"
+export CONDA_HOME="${CONDA_HOME:-$HOME/tools/miniforge3}"
+
+export PATH=/usr/local/cuda/bin:$PATH
 
 # 启用 Powerlevel10k 即时提示。此部分应保持在 ~/.zshrc 文件的顶部附近。
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
@@ -41,6 +43,9 @@ source $ZSH/oh-my-zsh.sh
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # 加载 nvm 的 bash 自动补全
  
 
+# 自定义别名
+alias c='clear'
+
 # >>> conda initialize >>>
 # !! 下方区块中的内容由 'conda init' 管理，请勿手动修改 !!
 __conda_setup="$("$CONDA_HOME/bin/conda" 'shell.zsh' 'hook' 2> /dev/null)"
@@ -56,5 +61,4 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 conda activate base >/dev/null 2>&1
-
 
