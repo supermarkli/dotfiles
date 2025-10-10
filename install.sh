@@ -123,7 +123,7 @@ info "4. terminal default profile，将 Linux 默认配置设为 zsh；或在 se
 info "5. 如果仍有 IDE 自动注入 'conda activate base'，在设置中搜索 activateEnvironment，将 python.terminal.activateEnvironment 设为 false"
 info "6. workbench.activityBar.orientation，改为vertical"
 info "7. 如果希望终端选中即复制，搜索copy on selection；右键粘贴，搜索right click behavior，改为paste"
-info "8. 一些好用的插件：one dark pro；vscode-icons；Office Viewer"
+info "8. 一些好用的插件：one dark pro；vscode-icons；"
 
 
 
