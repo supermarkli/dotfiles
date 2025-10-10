@@ -21,8 +21,8 @@ info "更新软件包列表..."
 sudo apt-get update
 
 # --- 2. 安装核心命令行工具 ---
-info "安装核心命令行工具（git、stow、curl、vim、zsh）..."
-sudo apt-get install -y git stow curl vim zsh
+info "安装核心命令行工具（git、stow、curl、vim、zsh chromium-browser）..."
+sudo apt-get install -y git stow curl vim zsh chromium-browser 
 
 # --- 2.1 创建常用目录 ---
 info "在 $HOME 中创建常用目录（documents、downloads、projects、tmp、tools）..."
