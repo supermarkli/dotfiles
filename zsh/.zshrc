@@ -1,6 +1,7 @@
 # ===== 用户自定义变量（集中管理） =====
 # Powerlevel10k gitstatus 缓存目录
 export GITSTATUS_CACHE_DIR="$HOME/tmp/gitstatus"
+export PYTHONDONTWRITEBYTECODE=1
 # 临时目录
 export TMPDIR=~/tmp
 export TMP=~/tmp
