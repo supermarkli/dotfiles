@@ -124,8 +124,9 @@ info "5. 如果仍有 IDE 自动注入 'conda activate base'，在设置中搜�
 info "6. workbench.activityBar.orientation，改为vertical"
 info "7. 如果希望终端选中即复制，搜索copy on selection；右键粘贴，搜索right click behavior，改为paste"
 info "8. md图片复制设置markdown.copyFiles.destination;注意顺序会影响优先度,把最宽泛的'**/*':'assets/'放最后"
-info "9. Cursor 取消勾选 Editor.PasteAs.Enabled"
-info "9. 一些好用的插件：one dark pro；vscode-icons；"
+info "10. Cursor 取消勾选 Editor.PasteAs.Enabled"
+info "11. 在搜索框中输入 files.exclude，添加**/.*"
+info "11. 一些好用的插件：one dark pro；vscode-icons；"
 
 
 

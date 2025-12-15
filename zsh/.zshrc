@@ -62,3 +62,4 @@ unset __conda_setup
 # <<< conda initialize <<<
 conda activate base >/dev/null 2>&1
 
+export PATH="$HOME/tools/npm-global/bin:$PATH"
