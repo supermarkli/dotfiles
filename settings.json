@@ -1,0 +1,30 @@
+{
+    "workbench.colorTheme": "Monokai Classic",
+    "files.autoSave": "afterDelay",
+    "editor.mouseWheelZoom": true,
+    "terminal.integrated.defaultProfile.windows": "Git Bash",
+    "editor.stickyScroll.enabled": false,
+    "python.languageServer": "Pylance",
+    "http.proxySupport": "on",
+    "geminicodeassist.project": "speedy-fulcrum-xzftk",
+    "remote.SSH.remotePlatform": {
+        "Atlanta": "linux"
+    },
+    "terminal.integrated.fontFamily": "DejaVuSansM Nerd Font Mono",
+    "files.exclude": {
+        "**/.*": true
+    },
+    "terminal.integrated.copyOnSelection": true,
+    "workbench.iconTheme": "vscode-icons",
+    "workbench.activityBar.location": "top",
+    "github.copilot.nextEditSuggestions.enabled": true,
+    "http.proxy": "http://127.0.0.1:7897",
+    "remote.SSH.localServerDownload": "always",
+    "editor.minimap.enabled": false
+    ,
+    "remote.extensionKind": {
+        "GitHub.copilot": ["ui"],
+        "GitHub.copilot-chat": ["ui"],
+        "pub.name": ["ui"]
+    }
+}
