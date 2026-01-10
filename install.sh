@@ -21,8 +21,8 @@ info "更新软件包列表..."
 sudo apt-get update
 
 # --- 2. 安装核心命令行工具 ---
-info "安装核心命令行工具（git、stow、curl、vim、zsh chromium-browser）..."
-sudo apt-get install -y git stow curl vim zsh chromium-browser 
+info "安装核心命令行工具（git、curl、vim、zsh chromium-browser）..."
+sudo apt-get install -y git curl vim zsh chromium-browser 
 
 # --- 2.1 创建常用目录 ---
 info "在 $HOME 中创建常用目录（documents、downloads、projects、tmp、tools）..."
@@ -77,19 +77,9 @@ info "下载地址： https://www.nerdfonts.com/font-downloads"
 # # 注意：在 Ubuntu 上，bat 的可执行文件是 batcat，fd-find 是 fdfind
 # # 你可能需要在 .zshrc 中为它们创建别名
 
-# --- 7. 使用 GNU Stow 链接配置文件 ---
-info "使用 stow 链接非 shell 配置（git、vim、tmux）..."
-stow -v -t "$HOME" -d "$DOTFILES_DIR" git
-stow -v -t "$HOME" -d "$DOTFILES_DIR" vim
-stow -v -t "$HOME" -d "$DOTFILES_DIR" tmux
-
-info "备份 ~/.zshrc 与 ~/.bashrc（如果存在）并链接 shell 配置..."
-cp -a "$HOME/.zshrc" "$HOME/.zshrc.bak.$(date +%s)" 2>/dev/null || true
-cp -a "$HOME/.bashrc" "$HOME/.bashrc.bak.$(date +%s)" 2>/dev/null || true
-rm -f "$HOME/.zshrc" "$HOME/.bashrc"
-
-stow -v -t "$HOME" -d "$DOTFILES_DIR" zsh
-stow -v -t "$HOME" -d "$DOTFILES_DIR" bash
+# --- 7. 链接配置文件 ---
+info "链接 dotfiles 到 $HOME..."
+"$DOTFILES_DIR/link.sh" link
 
 # --- 7.1 抑制 P10K instant prompt 的控制台输出警告（可选：quiet）---
 if [ -f "$HOME/.zshrc" ] && ! grep -q "POWERLEVEL9K_INSTANT_PROMPT" "$HOME/.zshrc"; then
