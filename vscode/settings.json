@@ -30,7 +30,8 @@
     ".monaco-workbench .part.editor>.content .editor-group-container>.title>.tabs-and-actions-container>.monaco-scrollable-element .scrollbar": "display: none;",
     ".monaco-scrollable-element>.scrollbar>.slider": "display: none;",
     ".monaco-workbench .part.editor>.content .editor-group-container>.title .tabs-container>.tab.active.tab-border-bottom>.tab-border-bottom-container": "display: none !important;",
-    ".monaco-editor .native-edit-context:focus-visible": "color: transparent !important;"
+    ".monaco-editor .native-edit-context:focus-visible": "color: transparent !important;",
+    ".monaco-workbench .explorer-item .explorer-item-content:after": "display: none !important;"
   },
   "workbench.colorCustomizations": {
     "focusBorder": "#00000000",
@@ -114,7 +115,7 @@
   "problems.decorations.enabled": false,
 
   // ===== 工作区 =====
-"update.mode": "none",
+  "update.mode": "none",
   "security.workspace.trust.enabled": false,
   "telemetry.telemetryLevel": "off",
   "breadcrumbs.enabled": false,
@@ -210,10 +211,10 @@
     "editor.tabSize": 2,
     "editor.defaultFormatter": "vscode.typescript-language-features"
   },
-//   "[vue]": {
-//     "editor.defaultFormatter": "Vue.volar",
-//     "editor.tabSize": 2
-//   },
+  //   "[vue]": {
+  //     "editor.defaultFormatter": "Vue.volar",
+  //     "editor.tabSize": 2
+  //   },
 
   // ===== LSP: Python =====
   "python.languageServer": "Pylance",
