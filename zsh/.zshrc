@@ -64,3 +64,21 @@ unset __conda_setup
 conda activate base >/dev/null 2>&1
 
 export PATH="$HOME/tools/npm-global/bin:$PATH"
+
+# -----------------------------------------------------------
+# SSH 隧道代理设置
+# 前提：SSH 连接时必须加参数 -R 17897:127.0.0.1:7897
+# -----------------------------------------------------------
+
+# 这里的 17897 必须和你 SSH -R 参数里的服务器端口一致
+export PROXY_PORT=17897
+
+# 统一使用 http 协议，兼容性最好
+export http_proxy="http://127.0.0.1:$PROXY_PORT"
+export https_proxy="http://127.0.0.1:$PROXY_PORT"
+
+# all_proxy 也建议用 http，除非你明确知道你需要 socks5 且工具支持
+export all_proxy="http://127.0.0.1:$PROXY_PORT"
+
+# 排除本地地址，防止死循环
+export no_proxy="localhost,127.0.0.1,::1,192.168.0.0/16,10.0.0.0/8"
