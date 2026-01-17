@@ -28,6 +28,15 @@
   2. 使用 `python3` 脚本配合 `requests` + `html2text` 精准抓取，禁止全网页 `markdownify`。
 - **输出**：仅展示包含【路径、行数/大小、处理耗时】的统计表格。
 
+### 3.1 URL 验证规则
+
+- **严禁**未经验证直接给出 URL
+- **验证流程**：
+  1. 使用 `WebSearch` 搜索官方文档地址
+  2. 使用 `WebReader/mcp__web_reader__webReader` 验证 URL 可访问性
+  3. 仅写入已验证的 URL
+- **工具优先级**：`WebSearch` > `tavily` 
+
 
 ## 4. 学术搜索与真伪校验 (Scholar Workflow)
 
